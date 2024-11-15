@@ -1,5 +1,6 @@
 import { UserOutlined } from '@ant-design/icons'
 import { useState,useEffect } from 'react';
+import Link from 'next/link';
 
 export default function personalBar() {
     
@@ -17,8 +18,10 @@ export default function personalBar() {
                 <div className="absolute border border-solid border-gray-400 personalBar boxContent">
                     <div className='p-3 text-center font-bold'>My Account</div>
                     <hr className="border-t border-gray-400"/>
-                    <div className='p-1 text-center cursor-pointer'><a>Settings</a></div>
-                    <div className='p-1 text-center cursor-pointer'><a>Sign In</a></div>
+                    {/* <div className='p-1 text-center cursor-pointer'><a>Settings</a></div> */}
+                    <div className='p-1 text-center cursor-pointer'>
+                        <Link href="/login"> <span>Log in</span>  </Link>
+                    </div>
                 </div>
                 )
             }

@@ -11,7 +11,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
     "@heroicons/react": "^2.1.5",
-    "antd": "^5.22.1",
+    "antd": "^4.24.16",
     "heroicon": "^0.0.2",
     "next": "15.0.3",
     "react": "^18.0.0",
