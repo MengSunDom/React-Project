@@ -1,24 +1,28 @@
+
 import Link from 'next/link';
 import NavLinks from '@/app/dashboard/nav-links';
 import { PowerIcon } from '@heroicons/react/24/outline';
+import Breadcrumb from './breadcrumb';
+import SearchBar from './searchBar';
+import { useState } from 'react';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
+import Personalbar from './personalBar';
 
-export default function TopNav() {
+
+interface TopNavProps {
+  isSideNavVisible: boolean;
+  toggleSideNav: () => void;
+}
+
+export default function TopNav({ isSideNavVisible, toggleSideNav }: TopNavProps) {
   return (
-    <div className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
-      <Link
-        className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-10"
-        href="/dashboard"
-      >
-
-      </Link>
-      <div className="flex flex-col items-center gap-4 px-2 sm:py-5">
-        <NavLinks />
-        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
-        <button className="group down flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 md:flex-none md:justify-start md:p-2 md:px-3">
-          <PowerIcon className="w-6" />
-          <div className="font-medium navContent hidden group-hover:block transition-opacity duration-200 ease-in-out">Sign Out</div>
-        </button>
+    <div className="topNav p-5">
+      <div className="showSideNav cursor-pointer" onClick={toggleSideNav}>
+        {isSideNavVisible?<MenuFoldOutlined />:<MenuUnfoldOutlined />}
       </div>
+      <Personalbar />
+      <Breadcrumb />
+      {/* <SearchBar /> */}
     </div>
   );
 }

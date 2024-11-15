@@ -24,17 +24,45 @@ body {
   position: absolute;
   bottom:20px;
 }
-
-.navContent{
+.boxContent{
   background-color: rgba(255, 255, 255, 100);
   border: 1px solid grey;
   border-radius: 10%;
-  box-shadow: -0.1rem 0.1rem #9999;
+  box-shadow: -0.1rem 0.1rem #9999;  
+}
+.navContent{
   white-space:nowrap;
   position: absolute;
   left: 3rem;
   padding:0.4rem;
   text-align: center;
   font: bolder;
+}
 
+.topNav{
+  background-color: rgba(255, 255, 255, 100);
+  border-bottom: 1px solid #9999;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  top:0;
+}
+
+.showSideNav{
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 20px;
+}
+
+.wholePage{
+  overflow: auto;
+}
+
+.personalBar{
+   right:1rem;
+}
+
+.Breadcrumb{
+  width:80%;
 }

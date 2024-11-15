@@ -9,17 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.1",
     "@heroicons/react": "^2.1.5",
     "antd": "^5.22.1",
     "heroicon": "^0.0.2",
     "next": "15.0.3",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-router-dom": "^5.3.3",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",

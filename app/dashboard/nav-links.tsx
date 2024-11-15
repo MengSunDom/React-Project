@@ -29,7 +29,7 @@ import {
               className="group flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 md:flex-none md:justify-start md:p-2 md:px-3"
             >
               <LinkIcon className="w-6" />
-              <p className="navContent hidden group-hover:block transition-opacity duration-200 ease-in-out">{link.name}</p>
+              <p className="navContent boxContent hidden group-hover:block transition-opacity duration-200 ease-in-out">{link.name}</p>
             </Link>
           );
         })}
