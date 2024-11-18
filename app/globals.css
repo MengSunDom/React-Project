@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 :root {
   --background: #ffffff;
@@ -70,3 +68,7 @@ body {
 .rotateCard{
   transform:rotateY(180deg)
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

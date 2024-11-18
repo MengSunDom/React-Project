@@ -2,6 +2,7 @@
 import { Layout, Button, Typography, Card } from "antd";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import MarkdownEditor from "@/app/dashboard/introducation/markdownEdit"
 import { FaFacebook, FaShoppingCart, FaChartBar } from 'react-icons/fa';  // Example icons from react-icons
 const { Content, Footer } = Layout;
 const { Title, Paragraph } = Typography;
@@ -77,17 +78,27 @@ const HomePage = () => {
 
     }
   };
-  
+  const number = 1;
   return (
     <Layout className="min-h-screen">
       {/* Hero Section */}
-      <Content className="bg-blue-100 text-center py-20">
+      <Content className="bg-blue-100 text-center py-4">
         <div className="max-w-5xl mx-auto px-6">
           <Title level={1} className="text-4xl font-extrabold text-gray-900">
             Welcome to My Website
           </Title>
+          <div>Historical Views: <span>{number.toString().padStart(5, '0')}</span></div>
+        </div>
+      </Content>
+
+      {/* Profile Section */}
+      <Content className="bg-yellow-100 text-left py-8">
+        <div className="max-w-6xl mx-auto">
+          <Title level={1} className="text-4xl font-extrabold text-gray-900">
+            My Profile
+          </Title>
           <Paragraph className="text-lg text-gray-700 mb-6">
-            This website will show you three different innovation functions.
+            <MarkdownEditor/>
           </Paragraph>
         </div>
       </Content>
@@ -138,10 +149,19 @@ const HomePage = () => {
       </Content>
 
       {/* Footer */}
-      <Footer className="bg-gray-800 text-white py-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="text-sm">© 2024 My Company. All rights reserved.</div>
+      <Footer className="!bg-black text-white py-6" style={{color: "#40a9ff"}}>
+        <div className="grid grid-cols-3 gap-4 h-10 p-2 text-center">
+          <span><a href="https://github.com/MengSunDom/React-Project" target="_blank" rel="noopener noreferrer" className="cursor-pointer">My Github</a></span>
+          <span><a href="https://au.linkedin.com/in/%E8%92%99-%E5%AD%99-542621302/en?trk=people-guest_people_search-card" target="_blank" rel="noopener noreferrer" className="cursor-pointer">My Linkedin</a></span>
+          <span className="cursor-pointer" >Contact me</span>
+          {/* <div>
+            <span>Mobile:</span>12345678<br></br>
+            <span>Email:</span>12345678@example.com
+          </div> */}
         </div>
+        {/* <div className="max-w-5xl mx-auto text-center">
+          <div className="text-sm">© 2024. All rights reserved.</div>
+        </div> */}
       </Footer>
     </Layout>
   );

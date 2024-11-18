@@ -1,5 +1,6 @@
+import 'antd/dist/antd.css'
 import '@/app/globals.css';
- 
+
 export default function RootLayout({
   children,
 }: {
