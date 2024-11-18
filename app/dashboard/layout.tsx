@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {isSideNavVisible && (<div className="w-full flex-none md:w-14">
         <SideNav />
       </div>)}
-      <div className="flex-grow bg-gray-200">
+      <div className="flex-grow bg-gray-200 overflow-scroll">
         <TopNav isSideNavVisible={isSideNavVisible} toggleSideNav={toggleSideNav} />
         {children}
       </div>

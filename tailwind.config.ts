@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // background: "var(--background)",
+        // foreground: "var(--foreground)",
+      },
+      transform: {
+        'rotate-y-180': 'rotateY(180deg)',
+        'rotate-x-180': 'rotateX(180deg)',
+      },
+      perspective: {
+        1000: '1000px',
       },
     },
   },

@@ -67,6 +67,6 @@ body {
   width:80%;
 }
 
-.login_form{
-  
+.rotateCard{
+  transform:rotateY(180deg)
 }
