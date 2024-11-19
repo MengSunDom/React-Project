@@ -20,7 +20,7 @@ export default function personalBar() {
                     <hr className="border-t border-gray-400"/>
                     {/* <div className='p-1 text-center cursor-pointer'><a>Settings</a></div> */}
                     <div className='p-1 text-center cursor-pointer'>
-                        <Link href="/login"> <span>Log in</span>  </Link>
+                        <Link href="/"> <span>Settings</span>  </Link>
                     </div>
                 </div>
                 )
