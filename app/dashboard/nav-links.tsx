@@ -7,14 +7,14 @@ import {
 
   const links = [
     { name: 'Home', href: '/dashboard', icon: HomeIcon },
-    {
-      name: 'Introducation',
-      href: '/dashboard/introducation',
-      icon: DocumentDuplicateIcon,
-    },
+    // {
+    //   name: 'Introducation',
+    //   href: '/dashboard/introducation',
+    //   icon: DocumentDuplicateIcon,
+    // },
+    { name: 'Social Media', href: '/dashboard/media', icon: UserGroupIcon },
     { name: 'Shopping', href: '/dashboard/shopping', icon: UserGroupIcon },
     { name: 'Dashboard', href: '/dashboard/dashboard', icon: UserGroupIcon },
-    { name: 'Social Media', href: '/dashboard/media', icon: UserGroupIcon },
   ];
   
   export default function NavLinks() {
