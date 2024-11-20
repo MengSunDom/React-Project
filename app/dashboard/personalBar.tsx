@@ -2,7 +2,7 @@ import { UserOutlined } from '@ant-design/icons'
 import { useState,useEffect } from 'react';
 import Link from 'next/link';
 
-export default function personalBar() {
+export default function PersonalBar() {
     
     const [isPersonalBarVisible, setIsPersonalBarVisible] = useState(false);
     

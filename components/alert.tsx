@@ -18,7 +18,7 @@ const CustomAlert: React.FC<CustomAlertProps> = ({ message, type, visible, durat
     if (visible && duration > 0) {
       const timer = setTimeout(() => {
         setIsVisible(false);
-        onClose && onClose();
+        if (onClose){ onClose(); }
       }, duration);
       return () => clearTimeout(timer);
     }

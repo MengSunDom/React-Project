@@ -5,6 +5,10 @@ import { useRouter } from "next/navigation";
 import { debounce, throttle } from "@/utils/utils";
 import CustomAlert from "@/components/alert"; // 引入自定义 Alert 组件
 
+interface UserForm {
+  username: string,
+  password: string
+}
 const LoginForm: React.FC = () => {
   const [alertVisible, setAlertVisible] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
@@ -13,7 +17,7 @@ const LoginForm: React.FC = () => {
 
   const users = ["Admin", "Customer", "Seller", "Staff"];
 
-  const onFinish = throttle((values: any) => {
+  const onFinish = throttle((values: UserForm) => {
     const { username, password } = values;
     if (users.includes(username) && username === password) {
       localStorage.setItem("user", JSON.stringify({ username }));
@@ -26,7 +30,7 @@ const LoginForm: React.FC = () => {
     }
   }, 1000);
 
-  const onFinishFailed = debounce((errorInfo: any) => {
+  const onFinishFailed = debounce((errorInfo: string) => {
     setAlertMessage("Form submission failed. Please check your input.");
     setAlertType("warning");
     setAlertVisible(true);

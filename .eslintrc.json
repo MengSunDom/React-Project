@@ -1,3 +1,22 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals", 
+    "next/typescript"
+  ],
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.ts"], // Target TypeScript files
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "varsIgnorePattern": "^use", // Allow unused imports that start with 'use'
+            "argsIgnorePattern": "^_" // Ignore unused arguments that start with an underscore
+          }
+        ]
+      }
+    }
+  ]
 }
