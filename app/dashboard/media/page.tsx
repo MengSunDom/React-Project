@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Tree, Modal, Button } from 'antd';
 import { DataNode } from 'antd/es/tree';
 import { XOutlined } from '@ant-design/icons';
-
+import PublishContentModal from './modal'
 // Define your content interface
 interface Content {
   contentID: string;
@@ -84,6 +84,7 @@ const Page: React.FC = () => {
           {/* Map over the contentMap to display content */}
           {contentMap.map((item) => (
             <div key={item.contentID} className="mb-4 p-4 bg-white shadow-md">
+              <img></img>
               <h3>{item.username}</h3>
               <p>{item.content}</p>
               <small>Published: {item.publishTime}</small>
@@ -94,14 +95,11 @@ const Page: React.FC = () => {
       </div>
 
       {/* Modal for publishing content */}
-      <Modal
-        title="Publish Content"
-        visible={isModalVisible}
-        onCancel={handleCancel}
-        footer={null}
-      >
-        <p>Content publishing form will go here.</p>
-      </Modal>
+      <PublishContentModal
+        isModalVisible={isModalVisible}
+        handleCancel={handleCancel}
+      >     
+      </PublishContentModal>
     </div>
   );
 };
